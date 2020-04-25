@@ -8,3 +8,25 @@
   width: auto;
   height: auto;
 }
+
+footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 3.5rem;
+  
+  .face {
+    margin-bottom: 1rem;
+  }
+  
+  .made-by {
+    margin-bottom: 1rem;
+    
+    a {
+      padding-left: 0;
+      padding-right: 0;
+      margin-bottom: 0rem;
+    }
+  }
+}
