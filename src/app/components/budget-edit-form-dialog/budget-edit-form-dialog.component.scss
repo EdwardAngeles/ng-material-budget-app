@@ -1,0 +1,29 @@
+mat-form-field {
+  width: 100%;
+  font-size: 1.1rem;
+  
+  margin-top: -0.3em;    // removing bottom padding, 
+  margin-bottom: -1.7em; // added by angular mateiral
+  
+  mat-icon {
+    padding-right: 2rem;
+  }
+}
+
+.mat-dialog-content {
+  overflow-y: hidden !important;
+}
+
+.mat-dialog-actions {
+  display: flow;
+  justify-content: flex-end;
+  
+  .push-left {
+    justify-self: flex-start;
+  }
+}
+
+.small-padding {
+  padding-left: 0;
+  padding-right: 0;
+}

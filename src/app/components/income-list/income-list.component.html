@@ -1,0 +1,13 @@
+<mat-expansion-panel>
+  <mat-expansion-panel-header [collapsedHeight]="'3.5rem'" [expandedHeight]="'4.5rem'">
+    <mat-panel-title>
+      <span class="title">INCOME</span>
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  
+  <app-budget-card
+    *ngFor="let income of incomes"
+    [budgetItem] = income
+  ></app-budget-card>
+  
+</mat-expansion-panel>

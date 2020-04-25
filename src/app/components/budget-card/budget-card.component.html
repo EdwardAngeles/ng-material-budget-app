@@ -1,0 +1,11 @@
+<div class="card-container" (click)="openDialog()">
+  
+  <div class="mat-body-strong description">
+    <span>{{ budgetItem.description }}</span>
+  </div>
+  
+  <div class="amount" [ngClass]="{'expense': budgetItem.amount < 0, 'income': budgetItem.amount > 0}">
+    <span>{{ budgetItem.amount }}</span>
+  </div>
+  
+</div>

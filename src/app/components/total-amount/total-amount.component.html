@@ -1,0 +1,7 @@
+<div class="container-total-amount">
+  
+  <h1 class="mat-display-4 amount"
+  [ngClass]="{'white': totalAmount === 0, 'red': totalAmount < 0, 'green': totalAmount > 0}"
+  >{{ totalAmount }}</h1>
+  
+</div>

@@ -1,0 +1,48 @@
+<h1 mat-dialog-title>Edit Amount</h1>
+
+<form (ngSubmit)="onSubmit(editForm)" #editForm="ngForm">
+  
+  
+  <div mat-dialog-content>
+    
+      <div class="mb-5 mx-1">
+        
+        <mat-form-field appearance="fill">
+          <mat-label>Amount</mat-label>
+          <input [ngModel]="budgetItem.amount" name="amount" [value]="budgetItem.amount" matInput required type="number" autocomplete="off" placeholder="ex: 800" required>
+          <mat-icon color="primary" matPrefix>attach_money</mat-icon>
+        </mat-form-field>
+        
+      </div>
+      
+      <div class="my-2 mx-1">
+        
+        <mat-form-field appearance="fill" required>
+          <mat-label>Description</mat-label>
+          <input [ngModel]="budgetItem.description" name="description" [value]="budgetItem.description" matInput required  type="text" autocomplete="off" placeholder="ex: Salary" required>
+          <mat-icon color="primary" matPrefix>description</mat-icon>
+        </mat-form-field>
+        
+      </div>
+    
+  </div>
+
+  
+  <div mat-dialog-actions>
+    
+    <button (click)="onRemove()" mat-icon-button color="warn" mat-dialog-close>
+      <mat-icon>delete</mat-icon>
+    </button>
+    
+    <span class="inline-block mx-auto"></span>
+    
+    <button type="submit" mat-flat-button color="primary" mat-dialog-close>
+      Update
+    </button>
+    
+    <button mat-flat-button color="warn" mat-dialog-close>Cancel</button>
+    
+  </div>
+  
+  
+</form>

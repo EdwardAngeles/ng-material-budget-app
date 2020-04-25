@@ -1,0 +1,31 @@
+<form (ngSubmit)="onSubmit(budgetForm)" #budgetForm="ngForm">
+  
+  <div class="my-2 mx-1">
+    
+    <mat-form-field appearance="outline">
+      <mat-label>Amount</mat-label>
+      <input ngModel name="amount" matInput required type="number" autocomplete="off" placeholder="ex: 800" required>
+      <mat-icon color="primary" matPrefix>attach_money</mat-icon>
+    </mat-form-field>
+    
+  </div>
+  
+  <div class="my-2 mx-1">
+    
+    <mat-form-field appearance="outline" required>
+      <mat-label>Description</mat-label>
+      <input ngModel name="description" matInput required  type="text" autocomplete="off" placeholder="ex: Salary" required>
+      <mat-icon color="primary" matPrefix>description</mat-icon>
+    </mat-form-field>
+    
+  </div>
+  
+  <div class="my-2 mx-1">
+    
+    <button type="submit" type="submit"  mat-raised-button color="primary" class="w-full">
+      <span>Add</span>
+    </button>
+    
+  </div>
+  
+</form>
