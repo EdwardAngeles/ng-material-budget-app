@@ -1,13 +1,22 @@
-<mat-expansion-panel>
-  <mat-expansion-panel-header [collapsedHeight]="'3.5rem'" [expandedHeight]="'4.5rem'">
+<mat-expansion-panel [expanded]="appSettings.expandIncomeList">
+  <mat-expansion-panel-header (click)="onHeaderClick()" [collapsedHeight]="'3.5rem'" [expandedHeight]="'4.5rem'">
     <mat-panel-title>
       <span class="title">INCOME</span>
     </mat-panel-title>
   </mat-expansion-panel-header>
   
-  <app-budget-card
-    *ngFor="let income of incomes"
-    [budgetItem] = income
-  ></app-budget-card>
+  <p *ngIf="incomes.length === 0;else myTemplate" class="nothing-message">
+    There are no incomes to show.
+    <span class="mat-small inline-block">Incomes will appear here.</span>
+  </p>
+  
+  <ng-template #myTemplate>
+    
+    <app-budget-card
+      *ngFor="let income of incomes"
+      [budgetItem] = income
+    ></app-budget-card>
+  
+  </ng-template>
   
 </mat-expansion-panel>

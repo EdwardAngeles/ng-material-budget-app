@@ -17,3 +17,11 @@ mat-expansion-panel {
   font-size: 2.1rem;
   line-height: normal;
 }
+
+.nothing-message {
+  font-size: 1.2rem;
+}
+
+::ng-deep .mat-expansion-indicator:after {
+  border-color: #616161;
+}

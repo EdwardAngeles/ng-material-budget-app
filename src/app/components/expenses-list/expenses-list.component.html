@@ -1,13 +1,22 @@
-<mat-expansion-panel>
-  <mat-expansion-panel-header [collapsedHeight]="'3.5rem'" [expandedHeight]="'4.5rem'">
+<mat-expansion-panel [expanded]="appSettings.expandExpensesList">
+  <mat-expansion-panel-header (click)="onHeaderClick()" [collapsedHeight]="'3.5rem'" [expandedHeight]="'4.5rem'">
     <mat-panel-title>
       <span class="title">EXPENSES</span>
     </mat-panel-title>
   </mat-expansion-panel-header>
   
-  <app-budget-card
-    *ngFor="let expense of expenses"
-    [budgetItem]=expense
-  ></app-budget-card>
+  <p *ngIf="expenses.length === 0;else myTemplate" class="nothing-message">
+    There are no expenses to show.
+    <span class="mat-small inline-block">Expenses will appear here.</span>
+  </p>
+  
+  <ng-template #myTemplate>
+    
+    <app-budget-card
+      *ngFor="let expense of expenses"
+      [budgetItem]=expense
+    ></app-budget-card>
+    
+  </ng-template>
   
 </mat-expansion-panel>
