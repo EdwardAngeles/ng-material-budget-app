@@ -5,22 +5,22 @@
   
   <div mat-dialog-content>
     
-      <div class="mb-5 mx-1">
+      <div class="mb-5 mt-2 mx-1">
         
-        <mat-form-field appearance="fill" tabindex="-1">
+        <mat-form-field appearance="outline">
           <mat-label>Amount</mat-label>
           <input [ngModel]="budgetItem.amount" name="amount" [value]="budgetItem.amount" matInput type="number" autocomplete="off" placeholder="ex: 800" required>
-          <mat-icon color="primary" matPrefix>attach_money</mat-icon>
+          <mat-icon color="primary" matSuffix>attach_money</mat-icon>
         </mat-form-field>
         
       </div>
       
       <div class="my-2 mx-1">
         
-        <mat-form-field appearance="fill" required>
+        <mat-form-field appearance="outline" required>
           <mat-label>Description</mat-label>
           <input [ngModel]="budgetItem.description" name="description" [value]="budgetItem.description" matInput type="text" autocomplete="off" placeholder="ex: Salary" required>
-          <mat-icon color="primary" matPrefix>description</mat-icon>
+          <mat-icon color="primary" matSuffix>description</mat-icon>
         </mat-form-field>
         
       </div>
