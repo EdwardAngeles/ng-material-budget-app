@@ -1,13 +1,15 @@
 .card-container {
   display: flex;
   justify-content: space-between;
-  background: #FAFAFA;
+  background: #F5F5F5;
   padding: 1rem;
   margin-bottom: 5px;
+  border-radius: 5px;
   cursor: pointer;
+  transition: background .2s ease-out;
   
   &:hover {
-    background: #EEEEEE;
+    background: #E0E0E0;
   }
   
   .description {
