@@ -2,7 +2,7 @@
   
   <div class="my-2 mx-1">
     
-    <mat-form-field appearance="outline" [floatLabel]="'always'">
+    <mat-form-field appearance="outline" [floatLabel]="'never'">
       <mat-label>Amount</mat-label>
       <input ngModel name="amount" matInput required type="number" autocomplete="off" placeholder="ex: 800" required>
       <mat-icon color="primary" matPrefix>attach_money</mat-icon>
@@ -12,8 +12,8 @@
   
   <div class="my-2 mx-1">
     
-    <mat-form-field appearance="outline" required [floatLabel]="'always'">
-      <mat-label>Description</mat-label>
+    <mat-form-field appearance="outline" required [floatLabel]="'never'">
+      <mat-label style="width: 100%;">Description</mat-label>
       <input ngModel name="description" matInput required  type="text" autocomplete="off" placeholder="ex: Salary" required>
       <mat-icon color="primary" matPrefix>description</mat-icon>
     </mat-form-field>
